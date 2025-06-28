@@ -17,7 +17,7 @@ st.subheader("Explore Taxonomy, Body Sites, and Gene Counts in Human Gut")
 # ----------------- Load Dataset -------------------
 @st.cache_data
 def load_data():
-    df = pd.read_csv(r"C:\Users\Ayush\gut_microbiome_project\GUTMICROBIOME\project_catalog.csv")
+    df = pd.read_csv("project_catalog.csv")
     df.rename(columns={'HMP Isolation Body Site': 'Body Site'}, inplace=True)  # Standardize column
     return df
 

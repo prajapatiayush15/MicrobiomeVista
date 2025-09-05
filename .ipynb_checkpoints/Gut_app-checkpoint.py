@@ -24,19 +24,19 @@ def load_data():
 df = load_data()
 
 # ----------------- Sidebar Filter -------------------
-selected_site = st.sidebar.selectbox("🧭 Choose a Body Site", df['Body Site'].dropna().unique())
+selected_site = st.sidebar.selectbox(" Choose a Body Site", df['Body Site'].dropna().unique())
 
 # ----------------- Filtered Data -------------------
 filtered_df = df[df['Body Site'] == selected_site]
 
 # ----------------- Tabs for Sections -------------------
 tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
-    "📊 Top 15 Organisms",
-    f"🧬 Organisms in {selected_site}",
-    "🧬 Gene Count by Superkingdom",
-    "🌡️ Heatmap: Body Site × Superkingdom",
-    "🏥 Sequencing Centers",
-    "🧬 Gene Count: Top 10 Organisms"
+    " Top 15 Organisms",
+    f" Organisms in {selected_site}",
+    " Gene Count by Superkingdom",
+    "🌡 Heatmap: Body Site × Superkingdom",
+    " Sequencing Centers",
+    " Gene Count: Top 10 Organisms"
 ])
 
 
